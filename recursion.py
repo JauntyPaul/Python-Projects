@@ -20,3 +20,35 @@ def factorial(n):
     
     
 print(factorial(6))
+
+
+print("\n")
+
+# Recursive function to sum of n numbers.
+
+
+def sum(n):
+    total=0
+    if(n>=0):
+        total= total+n
+        total+=sum(n-1)
+    return total
+
+print("The sum of numbers till 5 is",sum(5))
+
+
+
+
+print("\n")
+
+
+# Recursive function to print the elements in a list
+
+list1 = [1,2,3,4,5,6,7]
+
+def printer(list,num):
+    if(num-1>=0):
+        print(list[num-1])
+        printer(list,num-1)
+       
+printer(list1,len(list1))  
