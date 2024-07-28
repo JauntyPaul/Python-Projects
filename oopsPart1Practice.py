@@ -4,19 +4,25 @@
 
 class Account:
     def __init__(self,accNo,bal):
-        self.balance = bal
+        self.bal = bal
         self.accNo = accNo
     
     def debit(self,amount):
-        self.balance=self.balance-amount
+        self.bal=self.bal-amount
+        print("Rs.",amount,"has been Debited")
+        print("The Balance:",self.bal)
         
     def credit(self,amount):
-        self.balance=self.balance+amount
-        print("hello 100 bucks")
+        self.bal=self.bal+amount
+        print("Rs.",amount,"has been Credited")
+        print("The Balance:",self.bal)
         
     def balance(self):
-        return self.balance
+        print ("Balance amount:",self.bal)
+        
   
   
 ac1=Account(101,50000)   
 ac1.credit(100)
+ac1.debit(20000)
+ac1.balance()
