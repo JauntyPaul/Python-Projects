@@ -17,6 +17,9 @@ class Complex:
         self.real=real
         self.img=img
         
+    def show(self):
+        print(self.real+"i",self.img+"j")
 
 
-    
+n1=Complex(23,21)
+n1.show
